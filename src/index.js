@@ -1,12 +1,12 @@
 import { App } from './components'
 import { render } from 'uhtml';
+import getMonsters from './data';
 
-const initialState = {
-  monsters: [
-    { name: 'bulbasaur', liked: false },
-    { name: 'ivysaur', liked: true },
-    { name: 'venusaur', liked: false },
-  ]
-}
-
-render(document.getElementById('app'), App(initialState))
+getMonsters()
+  .then(monsters => {
+    console.log(monsters);
+    render(document.getElementById('app'), App(
+      { monsters: monsters.map(monster => ({...monster, liked: false}))}
+    ));
+  })
+  .catch(console.log);

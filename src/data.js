@@ -18,6 +18,4 @@ async function getMonsters() {
   return monsters
 }
 
-export {
-  getMonsters
-}
+export default getMonsters;
