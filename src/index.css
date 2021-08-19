@@ -1,0 +1,100 @@
+/* Normalize */
+
+:root {
+  --liked-color: #FF0000;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+button,
+button:active,
+button:focus,
+button:hover {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Monsters */
+
+.monsters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.monsters__container {
+  margin: 0 auto;
+  max-width: 56rem;
+}
+
+/* Monster */
+
+.monster {
+  list-style-type: none;
+  max-width: 20rem;
+  margin-right: 4rem;
+}
+
+.monster__name {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.monster__image {
+  max-width: 12rem;
+}
+
+.monster__index {
+  text-align: center;
+  margin: 1rem;
+}
+
+.monster__types {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.monster__type {
+  list-style-type: none;
+  margin: 1rem;
+}
+
+.monster__liked,
+.monster__liked:active,
+.monster__liked:focus,
+.monster__liked:hover,
+.monster__unliked,
+.monster__unliked:active,
+.monster__unliked:focus,
+.monster__unliked:hover {
+  color: var(--liked-color);
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.monster__liked svg,
+.monster__unliked svg {
+  width: 2.75rem;
+}

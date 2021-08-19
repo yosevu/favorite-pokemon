@@ -1,0 +1,22 @@
+{
+  "name": "favorite-pokemon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "lint": "eslint src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-functional": "^3.6.0",
+    "snowpack": "^3.8.6"
+  },
+  "dependencies": {
+    "uhtml": "^2.7.6"
+  }
+}
