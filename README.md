@@ -39,13 +39,15 @@ Practice and explore Functional Design concepts with Pokémon.
 - Composition with data, functions, and actions
 - Stratified design
 
-## Resources
+## Readings
 
 - [Composing Software](https://medium.com/javascript-scene/composing-software-the-book-f31c77fc3ddc)
+  - Composing Software: An Introduction
   - The Dao of Immutability
   - What is Functional Programming?
   - A Functional Programmer's Introduction to JavaScript
-- [2.2.4 Example: A Picture Language](https://sicp.sourceacademy.org/chapters/2.2.4.html)
+- [Structure and Interpretation of Computer Programs](https://sourceacademy.org/sicpjs/index)
+  - [2.2.4 Example: A Picture Language](https://sourceacademy.org/sicpjs/2.2.4)
 - First-class State
   - [First-class citizen](https://en.wikipedia.org/wiki/First-class_citizen)
   - [first-class object](https://en.wiktionary.org/wiki/first-class_object)
@@ -54,9 +56,9 @@ Practice and explore Functional Design concepts with Pokémon.
   - [Redux Application Data Flow (Redux)](https://redux.js.org/tutorials/essentials/part-1-overview-concepts#redux-application-data-flow)
   - [zustand](https://github.com/pmndrs/zustand)
   
-## References
+## Resources
 
 - [µhtml](https://github.com/WebReflection/uhtml)
 - [Functional Programming Jargon](https://github.com/hemanth/functional-programming-jargon)
+- [eslint-plugin-functional](https://github.com/jonaskello/eslint-plugin-functional)
 - [Pokémon (PokéAPI)](https://pokeapi.co/docs/v2#pokemon-section)
-
