@@ -20,41 +20,46 @@ const MonsterHeart = (liked) => {
   `
 }
 
-const MonsterTypes = () => html`
+const MonsterType = (type) => html`
+<li class="monster__type">${type}</li>
+`
+
+const MonsterTypes = (types) => html`
 <ul class="monster__types">
-  <li class="monster__type">grass</li>
-  <li class="monster__type">poison</li>
+  ${types.map(MonsterType)}
 </ul>
 `
 
-const Monster = ({ liked }) => html`
+const MonsterImage = (imageUrl, imageAlt) => html`
+<img
+  class="monster__image"
+  src=${imageUrl}
+  alt="${imageAlt}"
+/>
+`
+
+const Monster = ({ name, index, imageUrl, liked, types }) => html`
 <li class="monster">
-  <h2 class="monster__name">Bulbasaur</h2>
+  <h2 class="monster__name">${name}</h2>
 
-  ${MonsterTypes()}
+  ${MonsterTypes(types)}
 
-  <img class="monster__image" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Bulbasaur"/>
-
-  <div class="monster__index">#001</div>
+  ${MonsterImage(imageUrl, name)}
+  <div class="monster__index">#00${index}</div>
 
   ${MonsterHeart(liked)}
 </li>
 `
 
-const Monsters = ({ monsters }) => html`
+const Monsters = (monsters) => html`
 <ul class="monsters">
- ${Monster(monsters[0])}
- ${Monster(monsters[1])}
- ${Monster(monsters[2])}
- ${Monster(monsters[0])}
- ${Monster(monsters[1])}
- ${Monster(monsters[2])}
+  ${monsters.map(Monster)}
 </ul>
 `
 
-const App = (props) => html`
+const App = ({ monsters }) => html`
 <div class="monsters__container">
-  ${Monsters(props)}
+  ${Monsters(monsters)}
 </div>
 `
 
