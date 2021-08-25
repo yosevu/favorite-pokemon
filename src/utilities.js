@@ -7,11 +7,14 @@ const log = (message, value = null) => {
   console.log(message);
 };
 
-const logGroup = (label = null, fns) => {
+const logGroup = (label = null, fns = null) => {
   console.groupCollapsed(label);
-  fns.forEach((fn) => {
-    fn();
-  });
+  if (fns !== null) {
+    fns.forEach((fn) => {
+      fn();
+    })
+  };
+
   console.groupEnd();
 };
 
