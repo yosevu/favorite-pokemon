@@ -62,3 +62,4 @@ Practice and explore Functional Design concepts with Pokémon.
 - [Functional Programming Jargon](https://github.com/hemanth/functional-programming-jargon)
 - [eslint-plugin-functional](https://github.com/jonaskello/eslint-plugin-functional)
 - [Pokémon (PokéAPI)](https://pokeapi.co/docs/v2#pokemon-section)
+
