@@ -18,6 +18,44 @@ const transformMonsters = (monsters) => {
   })
 }
 
+const likeMonster = (action, state) => {
+  const { payload } = action
+  const { monsters } = state
+
+  return {
+    ...state,
+    monsters: [
+      ...monsters.slice(0, payload.pokedex - 1),
+      {
+        ...state.monsters[payload.pokedex - 1],
+        liked: true,
+      },
+      ...monsters.slice(payload.pokedex),
+    ],
+  }
+}
+
+const unlikeMonster = (action, state) => {
+  const { payload } = action
+  const { monsters } = state
+
+  return {
+    ...state,
+    monsters: [
+      ...monsters.slice(0, payload.pokedex - 1),
+      {
+        ...state.monsters[payload.pokedex - 1],
+        liked: false,
+      },
+      ...monsters.slice(payload.pokedex),
+    ]
+  }
+}
+
+
+
 export {
+  likeMonster,
+  unlikeMonster,
   transformMonsters,
 }

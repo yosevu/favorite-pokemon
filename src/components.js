@@ -1,49 +1,5 @@
 import { html } from 'uhtml';
-import { store  } from './store'
-
-const likePokemon = (action, state) => {
-  const { payload } = action
-  const { monsters } = state
-
-  return {
-    ...state,
-    monsters: [
-      ...monsters.slice(0, payload.pokedex - 1),
-      {
-        ...state.monsters[payload.pokedex - 1],
-        liked: true,
-      },
-      ...monsters.slice(payload.pokedex),
-    ],
-  }
-}
-
-const unlikePokemon = (action, state) => {
-  const { payload } = action
-  const { monsters } = state
-
-  return {
-    ...state,
-    monsters: [
-      ...monsters.slice(0, payload.pokedex - 1),
-      {
-        ...state.monsters[payload.pokedex - 1],
-        liked: false,
-      },
-      ...monsters.slice(payload.pokedex),
-    ]
-  }
-}
-
-const handleLike = ({ pokedex }) => {
-  const action = { type: 'favorite-pokemon/like', payload: { pokedex } }
-  store.update(action, likePokemon)
-}
-
-const handleUnlike = ({ pokedex }) => {
-  const action = { type: 'favorite-pokemon/unlike', payload: { pokedex } }
-  store.update(action, unlikePokemon)
-}
+import { handleLike, handleUnlike } from './handlers'
 
 const MonsterLikedHeart = (pokedex) => html`
 <button class="monster__liked" onclick=${(event) => handleUnlike({ event, pokedex })}>
