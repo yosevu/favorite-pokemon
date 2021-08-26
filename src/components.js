@@ -42,7 +42,7 @@ const MonsterPicture = (monster) => html`
 const MonsterHeart = (monster, onClick) => (monster.liked) ?  likedHeart(onClick) : unlikedHeart(onClick);
 
 const MonsterIndex = (monster) => html`
-<div class="monster__index">#00${monster.index}</div>
+<div class="monster__index">#00${monster.id}</div>
 `;
 
 const Monster = (monster, buttonClick) => html`
@@ -61,9 +61,9 @@ const Monsters = ({ monsters, buttonClick }) => html`
 </ul>
 `;
 
-const App = (props, buttonClick) => html`
+const App = (props) => html`
 <div class="monsters__container">
-  ${Monsters(props, buttonClick)}
+  ${Monsters(props)}
 </div>
 `;
 
