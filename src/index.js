@@ -1,12 +1,19 @@
+import { render } from 'uhtml'
 import { App } from './components'
-import { render } from 'uhtml';
+import { store } from './store'
 
-const initialState = {
-  monsters: [
-    { name: 'bulbasaur', liked: false },
-    { name: 'ivysaur', liked: true },
-    { name: 'venusaur', liked: false },
-  ]
+const init = (state) => {
+  render(document.getElementById('app'), App(state))
 }
 
-render(document.getElementById('app'), App(initialState))
+store.subscribe(init)
+
+logGroup(
+  `Action: favorite-pokemon/init`,
+  [
+    () => log('Initial state:'),
+    () => table(store.get('monsters'))
+  ]
+)
+
+init(store.get())

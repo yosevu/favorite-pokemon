@@ -58,13 +58,14 @@ li {
   margin-top: 5rem;
   margin-bottom: 1rem;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .monster__image {
   max-width: 12rem;
 }
 
-.monster__index {
+.monster__pokedex {
   text-align: center;
   margin: 1rem;
 }
@@ -78,6 +79,7 @@ li {
 .monster__type {
   list-style-type: none;
   margin: 1rem;
+  text-transform: capitalize;
 }
 
 .monster__liked,
