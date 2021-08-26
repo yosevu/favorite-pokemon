@@ -1,14 +1,18 @@
+const buildImageUrl = (pokedex) => `https://assets.pokemon.com/assets/cms2/img/pokedex/full/00${pokedex}.png`
+
+const transformMonsterTypes = (types) => types.map(({ type }) => type.name)
+
 const transformMonsters = (monsters) => {
   return monsters.map(({
-    id: index,
+    id: pokedex,
     name,
     types,
   }) => {
     return {
       name,
-      index,
-      imageUrl: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/00${index}.png`,
-      types: types.map(({ type }) => type.name),
+      pokedex,
+      imageUrl: buildImageUrl(pokedex),
+      types: transformMonsterTypes(types),
       liked: false,
     }
   })
