@@ -1,7 +1,4 @@
-import { render } from 'uhtml';
-import { App } from './components';
-
-const toggleLike = (monsters, i) => {
+const toggleLike = (renderer, monsters, i) => {
   const newMonsters = { 
     monsters: monsters.monsters.map(
     monster => {
@@ -10,11 +7,10 @@ const toggleLike = (monsters, i) => {
     }),
   };
 
-  const click = buttonClick(newMonsters);
+  const click = buttonClick(renderer, newMonsters);
 
   return {...newMonsters, buttonClick: click };
 };
 
-export const buttonClick = (monsters) => (i) => () => {
-  render(document.getElementById('app'), App(toggleLike(monsters, i)));
-};
+export const buttonClick = (renderer, monsters) => (i) =>
+  () => renderer(toggleLike(renderer, monsters, i));
