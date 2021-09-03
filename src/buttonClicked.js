@@ -1,14 +1,11 @@
-const toggleLike = (renderer, monsters, i) => {
-  const newMonsters = { 
-    monsters: monsters.monsters.map(
-    monster => {
-      const thisLike = (i === monster.id-1) ? !monster.liked : monster.liked;
-      return {...monster, liked: thisLike}
-    }),
-  };
+const getNewMonster = (i) => (monster) => {
+  const liked = (i === monster.id-1) ? !monster.liked : monster.liked;
+  return {...monster, liked};
+}
 
+const toggleLike = (renderer, { monsters }, i) => {
+  const newMonsters = { monsters: monsters.map(getNewMonster(i)) };
   const click = buttonClick(renderer, newMonsters);
-
   return {...newMonsters, buttonClick: click };
 };
 
