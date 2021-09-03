@@ -1,12 +1,3 @@
-import { App } from './components'
-import { render } from 'uhtml';
+import { getMonstersAndRender, renderer } from './renderer';
 
-const initialState = {
-  monsters: [
-    { name: 'bulbasaur', liked: false },
-    { name: 'ivysaur', liked: true },
-    { name: 'venusaur', liked: false },
-  ]
-}
-
-render(document.getElementById('app'), App(initialState))
+getMonstersAndRender(renderer);

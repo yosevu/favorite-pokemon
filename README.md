@@ -39,6 +39,7 @@ Practice and explore Functional Design concepts with Pokémon.
 - Composition with data, functions, and actions
 - Stratified design
 
+<<<<<<< HEAD
 ## Readings
 
 - [Composing Software](https://medium.com/javascript-scene/composing-software-the-book-f31c77fc3ddc)
@@ -48,6 +49,15 @@ Practice and explore Functional Design concepts with Pokémon.
   - A Functional Programmer's Introduction to JavaScript
 - [Structure and Interpretation of Computer Programs](https://sourceacademy.org/sicpjs/index)
   - [2.2.4 Example: A Picture Language](https://sourceacademy.org/sicpjs/2.2.4)
+=======
+## Resources
+
+- [Composing Software](https://www.dropbox.com/home/Sparkbox%20Bookshelf/Composing%20Software%20-%20An%20Exploration%20of%20Functional%20Programming%20and%20Object%20Composition%20in%20JavaScript)
+  - The Dao of Immutability
+  - What is Functional Programming?
+  - A Functional Programmer's Introduction to JavaScript
+- [2.2.4 Example: A Picture Language](https://sicp.sourceacademy.org/chapters/2.2.4.html)
+>>>>>>> f1c1662 (feat: create favorite-pokemon project)
 - First-class State
   - [First-class citizen](https://en.wikipedia.org/wiki/First-class_citizen)
   - [first-class object](https://en.wiktionary.org/wiki/first-class_object)
@@ -56,9 +66,18 @@ Practice and explore Functional Design concepts with Pokémon.
   - [Redux Application Data Flow (Redux)](https://redux.js.org/tutorials/essentials/part-1-overview-concepts#redux-application-data-flow)
   - [zustand](https://github.com/pmndrs/zustand)
   
+<<<<<<< HEAD
 ## Resources
 
 - [µhtml](https://github.com/WebReflection/uhtml)
 - [Functional Programming Jargon](https://github.com/hemanth/functional-programming-jargon)
 - [eslint-plugin-functional](https://github.com/jonaskello/eslint-plugin-functional)
 - [Pokémon (PokéAPI)](https://pokeapi.co/docs/v2#pokemon-section)
+=======
+## References
+
+- [µhtml](https://github.com/WebReflection/uhtml)
+- [Functional Programming Jargon](https://github.com/hemanth/functional-programming-jargon)
+- [Pokémon (PokéAPI)](https://pokeapi.co/docs/v2#pokemon-section)
+
+>>>>>>> f1c1662 (feat: create favorite-pokemon project)
