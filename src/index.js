@@ -3,7 +3,7 @@ import { render } from 'uhtml';
 import { store } from './redux/store';
 import { dispatchGetMonsters } from './redux/pokemonActions';
 
-async function main () {
+const main = async() => {
   await dispatchGetMonsters('https://pokeapi.co/api/v2/pokemon?limit=9');
   render(document.getElementById('app'), App(store.getState()));  
 }

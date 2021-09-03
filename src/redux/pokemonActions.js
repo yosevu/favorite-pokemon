@@ -17,7 +17,7 @@ export const dispatchToggleLike = async (monster) => {
   store.dispatch({
       type: 'TOGGLE_LIKE',
       name: monster.name,
-      payload: { ...monster, liked: monster.liked ? false : true }
+      payload: { ...monster, liked: !monster.liked}
   })
   render(document.getElementById('app'), App(store.getState()));
 }

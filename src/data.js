@@ -1,6 +1,7 @@
 /* eslint-disable functional/no-let */
 
 function pad(n, length) {
+  // disabling eslint functional/no let to allow creating variables with 'let' keyword
   let len = length - (''+n).length;
   return (len > 0 ? new Array(++len).join('0') : '') + n
 }
