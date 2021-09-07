@@ -17,6 +17,8 @@
     "snowpack": "^3.8.6"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
+    "redux-thunk": "^2.3.0",
     "uhtml": "^2.7.6"
   }
 }

@@ -1,12 +1,14 @@
 import { App } from './components'
 import { render } from 'uhtml';
+import { store } from './redux/store';
+import { dispatchGetMonsters } from './redux/pokemonActions';
 
-const initialState = {
-  monsters: [
-    { name: 'bulbasaur', liked: false },
-    { name: 'ivysaur', liked: true },
-    { name: 'venusaur', liked: false },
-  ]
+const main = async() => {
+  await dispatchGetMonsters('https://pokeapi.co/api/v2/pokemon?limit=9');
+  render(document.getElementById('app'), App(store.getState()));  
 }
 
-render(document.getElementById('app'), App(initialState))
+main().catch((error) => {
+  console.log(error)
+});
+

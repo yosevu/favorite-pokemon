@@ -1,23 +1,38 @@
-async function getMonsterList() {
-  const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=9')
-  const data = await response.json()
+/* eslint-disable functional/no-let */
 
+function pad(n, length) {
+  // disabling eslint functional/no let to allow creating variables with 'let' keyword
+  let len = length - (''+n).length;
+  return (len > 0 ? new Array(++len).join('0') : '') + n
+}
+
+async function getMonsterList(url) {
+  const response = await fetch(url)
+  const data = await response.json()
   return data.results
 }
 
-async function getMonsters() {
-  const monsterList = await getMonsterList()
+async function getMonsters(url) {
+  const monsterList = await getMonsterList(url);
 
   const monsters = await Promise.all(monsterList.map(async (monster) => {
     const response = await fetch(monster.url)
     const data = response.json()
-
     return data
   }));
 
-  return monsters
+  const monsterArray = monsters.map(monster => {
+    return {
+      name: monster.name,
+      liked: false,
+      index: pad(monster.id, 3),
+      type: monster.types
+    }
+  });
+
+  return monsterArray 
 }
 
 export {
   getMonsters
-}
+};
